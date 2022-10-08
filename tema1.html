@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Marko Makovyak">
+        <link rel="stylesheet" href="temastyle.css">
+        <title>Тема 1</title>
+        <style>
+           td{
+               border:1px solid blue;
+               border-radius: 5px;
+           } 
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>Загальна структура документу HTML</h1>
+            <p>
+                Загальна структура документу - це теги, які необхідні для побудови веб-сторінки. <br/>
+                Для побудови веб сторінки необхідно внести наступні теги: <br>
+            </p>
+            <h2>Title page</h2>
+            <code>
+                <table>
+                <tr><td>&lt;!DOCTYPE html&gt; <br/></td><td>Оголошення типу документа</td></tr> 
+                <tr><td>&lt;html lang="language-Country"&gt; <br/></td><td>Загальний тег для веб сторінки. Визначення мови сторінки і країни</td></tr>
+                <tr><td>    &lt;head&gt; <br/> </td><td>Тег в розділі якого оголошується інформація про сторінку</td></tr>
+                <tr><td>        &lt;meta charset="charset_UTF-8"&gt; <br/> </td><td>Оголошення кодування сторінки, тобто які символи буде використовувати сторінка</td></tr>
+                <tr><td>        &lt;meta name="viewport" content="wdth=device-width, initial-scale=1.0"&gt; <br/></td><td>Область перегляду, оголошується що область перегляду буде мати ширину вікна пристрою, з якого переглядають сторінку, встановлюється початковий маштаб сторінки розміром 1.0(ширини області перегляду пристрою)</td></tr>
+                <tr><td>        &lt;meta name="author" content="author_name"&gt; <br/></td><td>Оголошується автор сторінки і вказується авторство</td></tr>
+                <tr><td>        &lt;meta name="description" content="descrition_content"&gt; <br/></td><td>Оголошується опис сторінки і вказується загальний опис сторінки</td></tr>
+                <tr><td>        &lt;meta name="keywords" content="keyword1, keyword2, keyword3"&gt; <br/></td><td>Оголошуються ключові слова сторінки і вказуються ключові слова стосовно вмісту сторінки</td></tr>
+                <tr><td>        &lt;link rel="stylesheet" href="name_of_css_file.css"&gt; <br/></td><td>Підключається сторінки з каскадними таблицями стилів для поточної веб-сторінки </td></tr>
+                <tr><td>        &lt;link rel="icon" type="image/x-iocon" href="path_to_icon"&gt; <br/></td><td>Встановлюється іконка, яка буде відображатися у вкладці браузера</td></tr>
+                <tr><td>        &lt;title&gt;Title content&lt;/title&gt; <br/></td><td>Встановлюється заголовок сторінки, який буде відображатися на вкладці браузера</td></tr>
+                <tr><td>        &lt;style&gt; <br/></td><td>Оголошується тег стилів для поточної сторінки</td></tr>
+                <tr><td>            .class_name{ <br/> </td><td>Оголошується клас стилів</td></tr>
+                <tr><td>                class_style_atribute1; <br/></td><td>Перший атрибут стилю класу</td></tr>
+                <tr><td>                class_style_atribute2; <br/></td><td>Другий атрибут стилю класу</td></tr>
+                <tr><td>                ... <br/></td><td>Можливі атрибути стилю класу</td></tr>
+                <tr><td>                class_style_atributeN; <br/></td><td>N-й атрибут стилю класу</td></tr>
+                <tr><td>            } <br/> </td><td>Завершення оголошеного класу стилів</td></tr>
+                <tr><td>            #id_name{ <br/></td><td>Оголошення стилю елемента з айді</td></tr>
+                <tr><td>                id_style_atribute1; <br/></td><td>Перший атрибут стилю елемента айді</td></tr>
+                <tr><td>                id_style_atribute2; <br/></td><td>Другий атрибут стилю елемента айді</td></tr>
+                <tr><td>                ... <br/></td><td>Можливі атрибути стилю елемента айді</td></tr>
+                <tr><td>                id_style_atributeN; <br/></td><td>N-й атрибут стилю елемента айді</td></tr>
+                <tr><td>            } <br/></td><td>Завершення оголошеного елементу айді з стилями</td></tr>
+                <tr><td>            element_name{ <br/></td><td>Оголошення стилів конкретного елемента сторінки</td></tr>
+                <tr><td>                element_style_atribute1; <br/></td><td>Перший атрибут стилю елемента сторінки</td></tr>
+                <tr><td>                element_style_atribute2; <br/></td><td>Другий атрибут стилю елемента сторінки</td></tr>
+                <tr><td>                ... <br/></td><td>Можливі атрибути стилю елемента сторінки</td></tr>
+                <tr><td>                element_style_atributeN; <br/></td><td>N-й атрибут стилю елемента сторінки</td></tr>
+                <tr><td>            } <br/></td><td>Завершення оголошених стилів елементу сторінки</td></tr>
+                <tr><td>            @media display only (min-width:500px){ <br/></td><td>Оголошення контролю ширини вікна відображення сторінки, якщо мінімільна ширина 500 пікселів то виконати те, що оголошено в вкладених елементах</td></tr>
+                <tr><td>                element_name1, ... ,element_nameN{ <br/></td><td>Для вказаних елементів виконати оголошене в вкалденому елементі</td></tr>
+                <tr><td>                    width:100%; <br/></td><td>При ширині 500 пікселів встановити ширину вказаних елементів на 100%</td></tr>
+                <tr><td>               }</td><td>Завершення оголошеного для елементів сторінки атрибуту стилів</td></tr>
+                <tr><td>            } <br/></td><td>Завершення налаштування для адаптивності веб-сторінки</td></tr>
+                <tr><td>        &lt;/style&gt; <br/></td><td>Завершення тегу стилів для поточної сторінки</td></tr>
+                <tr><td>    &lt;/head&gt; <br/></td><td>Завершення тегу хед і завершення оголошення інфморації про сторінку</td></tr>
+                <tr><td>    &lt;body&gt; <br/></td><td>Відкриття тегу тіла сторінки, в який вклидається видиме наповнення веб-сторінки</td></tr>
+                <tr><td>            &lt;header&gt; <br/></td><td>Відкриття тегу шапки сторінки</td></tr>
+                <tr><td>                &lt;h1&gt;Header_content&lt;h1&gt; <br/></td><td>Вказування заголовку описуючого всю веб-сторінки, розміщеного в шапці сторінки</td></tr>
+                <tr><td>            &lt;/header&gt; <br/></td><td>Закриття тегу шапки сторінки</td></tr>
+                <tr><td>            &lt;nav&gt; <br/></td><td>Оголошення горизонтальної панелі навігації для сторінок веб-сайту</td></tr>
+                <tr><td>                &lt;span&gt;&lt;a href="path_to_page1.html" target="iframe_name"&gt;Home&lt;/a&gt;&lt;/span&gt; <br/></td><td>Перший пункт навігації, посилання на домашню сторінку, яка відкриється в фреймі</td></tr>
+                <tr><td>                &lt;span&gt;&lt;a href="path_to_page2.html" target="iframe_name"&gt;About&lt;/a&gt;&lt;/span&gt; <br/></td><td>Другий пункт навігації, посилання на сторінку "Про нас", яка відкриється в фреймі</td></tr>
+                <tr><td>                &lt;span&gt;&lt;a href="path_to_page3.html" target="iframe_name"&gt;Contacts&lt;/a&gt;&lt;/span&gt; <br/></td><td>Третій пункт навігації, посилання на сторінку "Контакти", яка відкриється в фреймі</td></tr>
+                <tr><td>            &lt;/nav&gt; <br/></td><td>Закриття тегу горизонтальної панелі навігації сторінок веб-сайту</td></tr>
+                <tr><td>            &lt;nav&gt; <br/></td><td>Оголошення вертикальної панелі навігації для сторінок веб-сайту</td></tr>
+                <tr><td>                &lt;div&gt;&lt;a href="path_to_page4.html" target="iframe_name"&gt;Page1&lt;/a&gt;&lt;/div&gt; <br/></td><td>Блок з посиланням на сторінку 1, яка відкриється в фреймі</td></tr>
+                <tr><td>               &lt;div&gt;&lt;a href="path_to_page5.html" target="iframe_name"&gt;Page2&lt;/a&gt;&lt;/div&gt; <br/></td><td>Блок з посиланням на сторінку 2, яка відкриється в фреймі</td></tr>
+                <tr><td>                ... <br/></td><td>Можливі блоки з посиланнями на сторінки, яка відкриється в фреймі</td></tr>
+                <tr><td>                &lt;div&gt;&lt;a href="path_to_pageN.html" target="iframe_name"&gt;PageN&lt;/a&gt;&lt;/div&gt; <br/></td><td>Блок з посиланням на сторінку N, яка відкриється в фреймі</td></tr>
+                <tr><td>            &lt;/nav&gt; <br/></td><td>Закриття тегу вертикальної панелі навігації сторінок сайту</td></tr>
+                <tr><td>            &lt;section&gt; <br/></td><td>Оголошення тематичного блоку сторінки</td></tr>
+                <tr><td>                &lt;iframe src="iframe_page.html" style="width:100%;height:2500px;border:none;" name="iframe_name"&gt; &lt;/iframe&gt; <br/></td><td>Оголошення фрейму, який відображає сторінки, на які посилаються навігаційні панелі</td></tr>
+                <tr><td>            &lt;/section&gt; <br/></td><td>Закриття тематичного блоку сторінки</td><td></tr>
+                <tr><td>            &lt;footer&gt; <br/></td><td>Відкриття блоки підвалу сторінки</td></tr>
+                <tr><td>                &lt;nav&gt; <br/></td><td>Оглошення панелі навігаії карти сайту в підвалі сторінки</td></tr>
+                <tr><td>                    &lt;ul&gt; <br/></td><td>Оголошення списку сторінкок присутніх на сайті</td></tr>
+                <tr><td>                        &lt;li&gt;&lt;a href="path_to_page1.html"&gt;Home&lt;/li&gt; <br/></td><td>Оголошення пункту списку карти сайту, з посиланням на домашню сторінку</td></tr>
+                <tr><td>                        &lt;li&gt;&lt;a href="path_to_page2.html"&gt;About&lt;/li&gt; <br/></td><td>Оголошення пункту списку карти сайту, з посиланням на сторінку "Про нас"</td></tr>
+                <tr><td>                        &lt;li&gt;&lt;a href="path_to_page3.html"&gt;Contacts&lt;/li&gt; <br/></td><td>Оголошення пункту списку карти сайту, з посиланням на сторінку "Контакти"</td></tr>
+                <tr><td>                    &lt;/ul&gt; <br/></td><td>Закриття тегу списку сторінок </td></tr>
+                <tr><td>                &lt;/nav&gt; <br/></td><td>Закриття панелі навігації карти сайту в підвалі сторінки</td></tr>
+                <tr><td>                &lt;nav&gt; <br/></td><td>Оголошення другої панелі навігації карти сайту в підвалі сторінки</td></tr>
+                <tr><td>                    &lt;ul&gt; <br/></td><td>Оголошення списку сторінок присутніх на сайті</td></tr>
+                <tr><td>                        &lt;li&gt;&lt;a href="path_to_page4.html"&gt;Page1&lt;/li&gt; <br/></td><td>Оголошення пункту списку карти сайту, з посиланням на сторінку 1</td></tr>
+                <tr><td>                        &lt;li&gt;&lt;a href="path_to_page5.html"&gt;Page2&lt;/li&gt; <br/></td><td>Оголошення пункту списку карти сайту, з посиланням на сторінку 2</td></tr>
+                <tr><td>                        ... <br/></td><td>Можливі пункти списку посилань карти сайту, на сторінки</td></tr>
+                <tr><td>                        &lt;li&gt;a href="path_to_pageN.html"&gt;Page2&lt;PageN&lt;/li&gt; <br/></td><td>Оголошення пункту cписку карти сайту, з посиланням на сторінку N</td></tr>
+                <tr><td>                    &lt;/ul&gt; <br/></td><td>Закриття тегу списку сторінок для карти сайту</td></tr>
+                <tr><td>                &lt;/nav&gt; <br/></td><td>Закриття тегу навігаційної панелі для карти сайту</td></tr>
+                <tr><td>                &lt;p&gt;&copy Made by Company_name&lt;/p&gt;</td><td>Вкладення абзацу з правами на інформацію сторінки, які належать визначеній компанії</td></tr>
+                <tr><td>            &lt;/footer&gt; <br/></td><td>Закритяя тегу підвалу сторінки</td></tr>
+                <tr><td>    &lt;/body&gt; <br/></td><td>Закриття тегу видимого вмісту сторінки</td></tr>
+                <tr><td>&lt;/html&gt; <br/></td><td>Закриття загального тегу html сторінки</td></tr>
+            </table>
+            </code>
+            <h2>Попередній вигляд загальної структури документа (відображення представленого коду):</h2>
+            <a href="indextema1.html">Вигляд описаної сторінки</a>
+            <hr/>
+            <h2>Iframe page</h2>
+            <code>
+                <table>
+                <tr><td>&lt;!DOCTYPE html&gt; <br/></td></tr>
+                <tr><td>&lt;html lang="language-Country"&gt; <br/></td></tr>
+                <tr><td>    &lt;head&gt; <br/></td></tr>
+                <tr><td>        &lt;meta charset="charset_UTF-8"&gt; <br/></td></tr>
+                <tr><td>        &lt;meta name="viewport" content="wdth=device-width, initial-scale=1.0"&gt; <br/></td></tr>
+                <tr><td>        &lt;meta name="author" content="author_name"&gt; <br/></td></tr>
+                <tr><td>        &lt;meta name="description" content="descrition_content"&gt; <br/></td></tr>
+                <tr><td>        &lt;meta name="keywords" content="keyword1, keyword2, keyword3"&gt; <br/></td></tr>
+                <tr><td>        &lt;link rel="stylesheet" href="name_of_css_file.css"&gt; <br/></td></tr>
+                <tr><td>        &lt;link rel="icon" type="image/x-iocon" href="path_to_icon"&gt; <br/></td></tr>
+                <tr><td>        &lt;title&gt;iframe_page_home.html&lt;/title&gt; <br/></td></tr>
+                <tr><td>        &lt;style&gt; <br/></td></tr>
+                <tr><td>            .class_name{ <br/> </td></tr>
+                <tr><td>                class_style_atribute1; <br/></td></tr>
+                <tr><td>                class_style_atribute2; <br/></td></tr>
+                <tr><td>                ... <br/></td></tr>
+                <tr><td>                class_style_atributeN; <br/></td></tr>
+                <tr><td>            } <br/> </td></tr>
+                <tr><td>            #id_name{ <br/></td></tr>
+                <tr><td>                id_style_atribute1; <br/></td></tr>
+                <tr><td>                id_style_atribute2; <br/></td></tr>
+                <tr><td>                ... <br/></td></tr>
+                <tr><td>                id_style_atributeN; <br/></td></tr>
+                <tr><td>            } <br/></td></tr>
+                <tr><td>            element_name{ <br/></td></tr>
+                <tr><td>                element_style_atribute1; <br/></td></tr>
+                <tr><td>                element_style_atribute2; <br/></td></tr>
+                <tr><td>                ... <br/></td></tr>
+                <tr><td>                element_style_atributeN; <br/></td></tr>
+                <tr><td>            } <br/></td></tr>
+                <tr><td>            @media display only (min-width:500px){ <br/></td></tr>
+                <tr><td>                element_name1, ... ,element_nameN{ <br/></td></tr>
+                <tr><td>                    width:100%; <br/></td></tr>
+                <tr><td>                }</td></tr>
+                <tr><td>            } <br/></td></tr>
+                <tr><td>        &lt;/style&gt; <br/></td></tr>
+                <tr><td>    &lt;/head&gt; <br/></td></tr>
+                <tr><td>    &lt;body&gt; <br/></td></tr>
+                <tr><td>        &lt;article&gt; <br/></td></tr>
+                <tr><td>            &lt;div&gt; <br/></td></tr>
+                <tr><td>                &lt;h2&gt;Content1_header&lt;h2&gt; <br/></td></tr>
+                <tr><td>                &lt;p&gt;Content1_paragraph&lt;/p&gt; <br/></td></tr>
+                <tr><td>            &lt;/div&gt; <br/></td></tr>
+                <tr><td>        &lt;/articlen&gt; <br/></td></tr>
+                <tr><td>        &lt;article&gt; <br/></td></tr>
+                <tr><td>            &lt;div&gt; <br/></td></tr>
+                <tr><td>                &lt;h2&gt;Content2_header&lt;h2&gt; <br/></td></tr>
+                <tr><td>                &lt;p&gt;Content2_paragraph&lt;/p&gt; <br/></td></tr>
+                <tr><td>            &lt;/div&gt; <br/></td></tr>
+                <tr><td>        &lt;/article&gt; <br/></td></tr>
+                <tr><td>    &lt;/body&gt; <br/></td></tr>
+                <tr><td>&lt;/html&gt; <br/></td></tr>
+                </table>            
+            </code>
+        </section>
+    </body>
+</html>
